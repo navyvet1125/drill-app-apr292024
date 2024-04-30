@@ -19,23 +19,3 @@ Since this is not intended to be a fully functional standalone app, here are som
 ## Cool feature
 Since it is just an app that sends back a message based on what is typed by the user, I wanted to try to implement SetTimeout to fire after 2 seconds after the user stops typing.  Though, I initially planned to use two separate events (onKeyUp and onKeyDown) to manage the timer with a variable timer that was accessible in the top level of the module, but as I was typing, Copilot suggested a method to utilize the timer in such a way that only one event was necessary:
 
-  `const [message, setMessage] = useState('')
-  const [isTyping, setIsTyping] = useState(false);
-  // timer variable to hold the setTimeout function to check if the user is typing
-  let timer = null;
-  // Function to handle the input event
-  async function handleSubmit (e){
-    if(timer){
-      clearTimeout(timer)
-    } else {
-      setIsTyping(true)
-      await axios.get('http://localhost:3000/typing/true')
-    }`
-    `timer = setTimeout( async () => {
-      if(isTyping) await axios.get('http://localhost:3000/typing/false')
-      setIsTyping(false)
-      let value = e.target.value
-      let res = await axios.get('http://localhost:3000/'+value)
-      setMessage(res.data.message)
-    }, 2000);
-  }`
