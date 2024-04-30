@@ -18,4 +18,8 @@ Since this is not intended to be a fully functional standalone app, here are som
 
 ## Cool feature
 Since it is just an app that sends back a message based on what is typed by the user, I wanted to try to implement SetTimeout to fire after 2 seconds after the user stops typing.  Though, I initially planned to use two separate events (onKeyUp and onKeyDown) to manage the timer with a variable timer that was accessible in the top level of the module, but as I was typing, Copilot suggested a method to utilize the timer in such a way that only one event was necessary:
+![Screenshot of code sample](/Screenshot2024-04-29.png)
 
+## Feedback
+Constructive feedback is welcome, as I am always open to improving my code.  **Please be kind.**
+*Thanks*
