@@ -9,6 +9,7 @@ This is a fullstack EVN app written in Express, Vite(w react template), and Node
 
 ## Issues
 Since this is not intended to be a fully functional standalone app, here are some of the issues with the app include:
+* No Error Handling: If it breaks, it breaks
 * No server side validation, meaning a lack of protection from bad actors
 * Inadequate use of CORS, further lack of protection
 * Not production ready
