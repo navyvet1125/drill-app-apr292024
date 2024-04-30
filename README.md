@@ -35,7 +35,7 @@ Since it is just an app that sends back a message based on what is typed by the 
       if(isTyping) await axios.get('http://localhost:3000/typing/false')
       setIsTyping(false)
       let value = e.target.value
-      let res = await axios.get(`http://localhost:3000/${value}`)
+      let res = await axios.get('http://localhost:3000/'+value)
       setMessage(res.data.message)
     }, 2000);
   }`
