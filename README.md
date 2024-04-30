@@ -24,11 +24,6 @@ Since it is just an app that sends back a message based on what is typed by the 
   // timer variable to hold the setTimeout function to check if the user is typing
   let timer = null;
   // Function to handle the input event
-  // Fired when on key up event in the input field
-  // If the timer is already set, clear the timer then set the timer again
-  // If not, set isTyping to true, let the server know, and then set the timer
-  // If the user stops typing for 2 seconds, let the server know, set isTyping to false, 
-  // send the request to the server, and set the message from the server response
   async function handleSubmit (e){
     if(timer){
       clearTimeout(timer)
