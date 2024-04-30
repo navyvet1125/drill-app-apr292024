@@ -30,8 +30,8 @@ Since it is just an app that sends back a message based on what is typed by the 
     } else {
       setIsTyping(true)
       await axios.get('http://localhost:3000/typing/true')
-    }
-    timer = setTimeout( async () => {
+    }`
+    `timer = setTimeout( async () => {
       if(isTyping) await axios.get('http://localhost:3000/typing/false')
       setIsTyping(false)
       let value = e.target.value
